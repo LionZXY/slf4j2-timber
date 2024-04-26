@@ -28,9 +28,10 @@ public class TimberLoggerAdapterTest {
   }
 
   @Test public void debugTest() {
+    Logger test = logger;
     Timber.plant(new Timber.DebugTree());
 
-    logger.debug("Hello, world!");
+    test.debug("Hello, world!");
 
     List<LogItem> logs = ShadowLog.getLogs();
     assertThat(logs).hasSize(1);

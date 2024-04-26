@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'checkstyle'
+apply plugin: "com.github.harbby.gradle.serviceloader"
 
 task checkstyle(type: Checkstyle) {
     configFile rootProject.file('checkstyle.xml')
