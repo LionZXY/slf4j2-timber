@@ -2,45 +2,49 @@ apply plugin: 'com.android.library'
 apply plugin: 'checkstyle'
 
 task checkstyle(type: Checkstyle) {
-  configFile rootProject.file('checkstyle.xml')
-  source 'src/main/java'
-  ignoreFailures false
-  showViolations true
-  include '**/*.java'
+    configFile rootProject.file('checkstyle.xml')
+    source 'src/main/java'
+    ignoreFailures false
+    showViolations true
+    include '**/*.java'
 
-  classpath = files()
+    classpath = files()
 }
 
 afterEvaluate {
-  if (project.tasks.findByName('check')) {
-    check.dependsOn('checkstyle')
-  }
+    if (project.tasks.findByName('check')) {
+        check.dependsOn('checkstyle')
+    }
 }
 
 android {
-  compileSdkVersion rootProject.ext.compileSdkVersion
+    namespace = 'com.arcao.slf4j.timber'
+    compileSdkVersion = rootProject.ext.compileSdkVersion
 
-  defaultConfig {
-    minSdkVersion rootProject.ext.minSdkVersion
-    consumerProguardFiles 'consumer-proguard-rules.pro'
-  }
+    defaultConfig {
+        aarMetadata {
+            minCompileSdk = rootProject.ext.minSdkVersion
+        }
+        minSdkVersion rootProject.ext.minSdkVersion
+        consumerProguardFiles 'consumer-proguard-rules.pro'
+    }
 
-  lintOptions {
-    textReport true
-    textOutput 'stdout'
-  }
+    lintOptions {
+        textReport true
+        textOutput 'stdout'
+    }
 }
 
 dependencies {
-  compileOnly 'org.jetbrains:annotations:16.0.1'
-  
-  implementation deps.slf4j
-  implementation deps.timber
+    compileOnly 'org.jetbrains:annotations:16.0.1'
 
-  testImplementation deps.festandroid
-  testImplementation deps.festassert
-  testImplementation deps.junit
-  testImplementation deps.robolectric
+    implementation deps.slf4j
+    implementation deps.timber
+
+    testImplementation deps.festandroid
+    testImplementation deps.festassert
+    testImplementation deps.junit
+    testImplementation deps.robolectric
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
