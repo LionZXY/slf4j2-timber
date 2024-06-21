@@ -1,4 +1,5 @@
 [versions]
+kotlin = "2.0.0"
 android-gradle = "8.5.0" # https://developer.android.com/studio/releases/gradle-plugin
 slf4j = "2.0.13"
 timber = "5.0.1"
@@ -22,4 +23,5 @@ robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "
 [bundles]
 
 [plugins]
-android-app = { id = "com.android.library", version.ref = "android-gradle" }
+android-library = { id = "com.android.library", version.ref = "android-gradle" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

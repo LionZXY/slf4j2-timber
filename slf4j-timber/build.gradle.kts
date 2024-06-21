@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.android.app)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -15,7 +16,14 @@ android {
             "consumer-proguard-rules.pro"
         )
     }
-
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
     lint {
         textReport = true
     }
