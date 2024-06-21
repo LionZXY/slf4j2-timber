@@ -29,7 +29,7 @@ Download [the latest AAR][4] or grab it via Maven:
 
 ```xml
 <dependency>
-  <groupId>com.arcao</groupId>
+  <groupId>uk.kulikov</groupId>
   <artifactId>slf4j-timber</artifactId>
   <version>3.1</version>
   <type>aar</type>

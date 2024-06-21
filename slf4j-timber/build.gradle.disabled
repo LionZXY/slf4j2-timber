@@ -18,7 +18,7 @@ afterEvaluate {
 }
 
 android {
-    namespace = 'com.arcao.slf4j.timber'
+    namespace = 'uk.kulikov.slf4j.timber'
     compileSdkVersion = rootProject.ext.compileSdkVersion
 
     defaultConfig {
@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    compileOnly 'org.jetbrains:annotations:16.0.1'
+    compileOnly 'org.jetbrains:annotations:'
 
     implementation deps.slf4j
     implementation deps.timber

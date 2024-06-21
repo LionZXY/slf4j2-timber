@@ -1,4 +1,4 @@
-package com.arcao.slf4j.timber;
+package uk.kulikov.slf4j.timber;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

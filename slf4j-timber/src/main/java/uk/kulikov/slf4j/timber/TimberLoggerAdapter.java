@@ -1,4 +1,4 @@
-package com.arcao.slf4j.timber;
+package uk.kulikov.slf4j.timber;
 
 import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
