@@ -1,5 +1,4 @@
 import org.jreleaser.model.Active
-import org.jreleaser.model.Signing
 
 plugins {
     alias(libs.plugins.android.library)
@@ -115,9 +114,6 @@ publishing {
 }
 
 jreleaser {
-    environment {
-        variables = file("/home/lionzxy/.jreleaser/config.toml")
-    }
     project {
         inceptionYear = "2024"
         author("@LionZXY")
@@ -128,10 +124,6 @@ jreleaser {
         active = Active.ALWAYS
         armored = true
         verify = true
-        mode = Signing.Mode.FILE
-        publicKey = "/home/lionzxy/Downloads/public.pgp"
-        secretKey = "/home/lionzxy/Downloads/private.pgp"
-
     }
     release {
         github {
@@ -140,7 +132,6 @@ jreleaser {
     }
     deploy {
         maven {
-            enabled = true
             mavenCentral.create("sonatype") {
                 active = Active.ALWAYS
                 url = "https://central.sonatype.com/api/v1/publisher"
