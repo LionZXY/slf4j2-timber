@@ -25,7 +25,7 @@ Version 2.0 *(2015-04-28)*
 ----------------------------
 
  * Updated to Timber 3.0.1
- * Update slf4j-timber to work with Timber 3.+
+ * Update slf4j2-timber to work with Timber 3.+
 
 
 Version 1.6 *(2015-04-28)*

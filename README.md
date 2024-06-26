@@ -1,13 +1,13 @@
-slf4j-timber
+slf4j2-timber
 ============
-[![Build Status](https://travis-ci.org/arcao/slf4j-timber.svg?branch=master)](https://travis-ci.org/arcao/slf4j-timber) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.arcao/slf4j-timber/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.arcao/slf4j-timber) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-slf4j--timber-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/272)
+[![Build Status](https://travis-ci.org/arcao/slf4j2-timber.svg?branch=master)](https://travis-ci.org/arcao/slf4j2-timber) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.arcao/slf4j2-timber/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.arcao/slf4j2-timber) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-slf4j--timber-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/272)
 
 [SLF4J][1] binding for Jake Wharton's [Timber][2] Android logging library
 
 Usage
 -----
 
-Just put `slf4j-timber`, `timber` and `slf4j-api` (see note in Download) 
+Just put `slf4j2-timber`, `timber` and `slf4j-api` (see note in Download) 
 artifacts to your project and use `slf4j` like before:
 
 ```java
@@ -30,23 +30,23 @@ Download [the latest AAR][4] or grab it via Maven:
 ```xml
 <dependency>
   <groupId>uk.kulikov</groupId>
-  <artifactId>slf4j-timber</artifactId>
+  <artifactId>slf4j2-timber</artifactId>
   <version>3.1</version>
   <type>aar</type>
 </dependency>
 ```
 or Gradle:
 ```groovy
-implementation 'com.arcao:slf4j-timber:3.1@aar'
+implementation 'com.arcao:slf4j2-timber:3.1@aar'
 ```
 
-> Note: `timber` and `slf4j-api` are the transitive dependencies of `slf4j-timber`, 
+> Note: `timber` and `slf4j-api` are the transitive dependencies of `slf4j2-timber`, 
 so you don't need to take care of them in Maven POM and Gradle build script. 
 
 Transitive dependencies by version
 -----
 
-slf4j-timber | Timber | SLF4J
+slf4j2-timber | Timber | SLF4J
 ------------ | ------ | -----
 3.1          | 4.7.1  | 1.7.25
 3.0          | 4.4.0  | 1.7.21
@@ -76,14 +76,14 @@ Maven:
 </dependency>
 <dependency>
   <groupId>com.arcao</groupId>
-  <artifactId>slf4j-timber</artifactId>
+  <artifactId>slf4j2-timber</artifactId>
   <version>3.1</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
 compile 'org.slf4j:log4j-over-slf4j:1.7.25'
-compile 'com.arcao:slf4j-timber:3.1'
+compile 'com.arcao:slf4j2-timber:3.1'
 ```
 
 Don't forget to exclude `log4j` transitive dependency from artifact which use 
@@ -133,6 +133,6 @@ License
  [1]: http://www.slf4j.org/
  [2]: https://github.com/JakeWharton/timber
  [3]: https://github.com/JakeWharton/timber#usage
- [4]: https://repository.sonatype.org/#nexus-search;gav~com.arcao~slf4j-timber~~~
+ [4]: https://repository.sonatype.org/#nexus-search;gav~com.arcao~slf4j2-timber~~~
  [5]: http://www.slf4j.org/legacy.html
  [6]: http://www.slf4j.org/download.html

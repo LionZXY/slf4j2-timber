@@ -1,4 +1,4 @@
-rootProject.name = "slf4j-timber-root"
+rootProject.name = "slf4j2-timber-root"
 
 pluginManagement {
     repositories {
@@ -16,6 +16,6 @@ dependencyResolutionManagement {
 }
 
 include(
-    ":slf4j-timber"
+    ":slf4j2-timber"
 )
 

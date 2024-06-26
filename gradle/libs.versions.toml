@@ -9,10 +9,11 @@ festandroid = "1.0.8"
 mockitocore = "2.23.0"
 robolectric = "4.12"
 annotations = "16.0.1"
+jreleaser = "1.12.0"
 
 [libraries]
 slf4j = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
-annotations = {group = "org.jetbrains", name = "annotations", version.ref = "annotations"}
+annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 junit = { group = "org.junit.vintage", name = "junit-vintage-engine", version.ref = "junit" }
 festassert = { group = "org.easytesting", name = "fest-assert-core", version.ref = "festassert" }
@@ -25,3 +26,4 @@ robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "
 [plugins]
 android-library = { id = "com.android.library", version.ref = "android-gradle" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jreleaser = { id = "org.jreleaser", version.ref = "jreleaser" }

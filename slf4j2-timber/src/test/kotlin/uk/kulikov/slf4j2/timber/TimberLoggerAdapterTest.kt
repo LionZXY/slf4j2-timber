@@ -1,4 +1,4 @@
-package uk.kulikov.slf4j.timber
+package uk.kulikov.slf4j2.timber
 
 import org.fest.assertions.api.Assertions.assertThat
 import java.util.List
