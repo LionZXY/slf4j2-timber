@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("org.jreleaser")
     id("maven-publish")
+    id("signing")
 }
 
 android {
@@ -45,6 +46,8 @@ dependencies {
     testImplementation(libs.robolectric)
 }
 
+// Deploy
+
 android {
     publishing {
         singleVariant("release") {
@@ -66,22 +69,22 @@ publishing {
             pom {
                 name.set(project.properties["POM_NAME"].toString())
                 description.set(project.properties["POM_DESCRIPTION"].toString())
-                url.set(project.properties["POM_URL"].toString())
+                url.set("https://github.com/lionzxy/slf4j2-timber")
                 issueManagement {
-                    url.set(project.properties["POM_ISSUE_URL"].toString())
+                    url.set("https://github.com/LionZXY/slf4j2-timber/issues")
                 }
 
                 scm {
-                    url.set(project.properties["POM_SCM_URL"].toString())
-                    connection.set(project.properties["POM_SCM_CONNECTION"].toString())
-                    developerConnection.set(project.properties["POM_SCM_DEV_CONNECTION"].toString())
+                    url.set("https://github.com/LionZXY/slf4j2-timber")
+                    connection.set("scm:git://github.com/LionZXY/slf4j2-timber.git")
+                    developerConnection.set("scm:git://github.com/LionZXY/slf4j2-timber.git")
                 }
 
                 licenses {
                     license {
-                        name.set(project.properties["POM_LICENCE_NAME"].toString())
-                        url.set(project.properties["POM_LICENCE_URL"].toString())
-                        distribution.set(project.properties["POM_LICENCE_DIST"].toString())
+                        name.set("The Apache Software License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        distribution.set("repo")
                     }
                 }
 
@@ -137,7 +140,12 @@ jreleaser {
                 url = "https://central.sonatype.com/api/v1/publisher"
                 stagingRepository(layout.buildDirectory.dir("staging-deploy").get().toString())
                 setAuthorization("Basic")
-                applyMavenCentralRules = false
+                applyMavenCentralRules = false // Wait for fix: https://github.com/kordamp/pomchecker/issues/21
+                sign = true
+                checksums = true
+                sourceJar = true
+                javadocJar = true
+                maxRetries = "1024"
             }
         }
     }
