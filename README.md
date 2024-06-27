@@ -8,7 +8,7 @@ This is a fork of [repository from arcao](https://github.com/arcao/slf4j-timber)
 - **SLF4J 2+ support**
 
 Other differences:
-- Updated all dependencies, including Kotlin
+- Updated all dependencies, including Gradle
 - Migrated to Kotlin and Kotlin DSL for gradle files
 - Migrated infrastructure to Github Actions
 - Migration of publishing to Maven Central (instead of the deprecated OSSRH)
