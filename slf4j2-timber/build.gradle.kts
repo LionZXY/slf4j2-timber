@@ -146,6 +146,7 @@ jreleaser {
                 checksums = true
                 sourceJar = true
                 javadocJar = true
+                retryDelay = 60
             }
         }
     }
