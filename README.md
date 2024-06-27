@@ -1,6 +1,6 @@
 slf4j2-timber
 ============
-[![Build Action](https://github.com/github/docs/actions/workflows/push.yml/badge.svg)](https://github.com/LionZXY/slf4j2-timber/actions/workflows/push.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/uk.kulikov/slf4j2-timber/badge.svg)](https://maven-badges.herokuapp.com/maven-central/uk.kulikov/slf4j2-timber) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-slf4j--timber-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/272)
+[![Build Action](https://github.com/LionZXY/slf4j2-timber/actions/workflows/push.yml/badge.svg)](https://github.com/LionZXY/slf4j2-timber/actions/workflows/push.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/uk.kulikov/slf4j2-timber/badge.svg)](https://maven-badges.herokuapp.com/maven-central/uk.kulikov/slf4j2-timber) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-slf4j--timber-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/272)
 
 [SLF4J 2][1] binding for Jake Wharton's [Timber][2] Android logging library
 
