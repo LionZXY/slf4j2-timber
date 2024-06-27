@@ -145,7 +145,6 @@ jreleaser {
                 checksums = true
                 sourceJar = true
                 javadocJar = true
-                maxRetries = "1024"
             }
         }
     }
