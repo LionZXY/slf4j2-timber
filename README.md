@@ -4,6 +4,15 @@ slf4j2-timber
 
 [SLF4J 2][1] binding for Jake Wharton's [Timber][2] Android logging library
 
+This is a fork of [repository from arcao](https://github.com/arcao/slf4j-timber). The main differences are:
+- **SLF4J 2+ support**
+
+Other differences:
+- Updated all dependencies, including Kotlin
+- Migrated to Kotlin and Kotlin DSL for gradle files
+- Migrated infrastructure to Github Actions
+- Migration of publishing to Maven Central (instead of the deprecated OSSRH)
+
 Usage
 -----
 
@@ -34,14 +43,18 @@ Download [the latest AAR][4] or grab it via Maven:
     <groupId>uk.kulikov</groupId>
     <artifactId>slf4j2-timber</artifactId>
     <version>1.0</version>
-    <type>aar</type>
 </dependency>
 ```
 
-or Gradle:
+or Gradle Kotlin DSL:
 
 ```kotlin
 implementation("com.arcao:slf4j2-timber:1.0")
+```
+or Gradle Groovy:
+
+```groovy
+implementation 'com.arcao:slf4j2-timber:1.0'
 ```
 
 > Note: `timber` and `slf4j-api` are the transitive dependencies of `slf4j2-timber`,

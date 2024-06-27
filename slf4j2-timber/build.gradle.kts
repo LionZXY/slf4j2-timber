@@ -130,7 +130,8 @@ jreleaser {
     }
     release {
         github {
-            skipRelease = true
+            skipTag = true
+            sign = true
         }
     }
     deploy {
