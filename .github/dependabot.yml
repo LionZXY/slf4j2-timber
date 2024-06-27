@@ -1,0 +1,11 @@
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/" 
+    schedule:
+      day: "saturday"
+      interval: "weekly"
+      time: "03:00"
+    groups:
+      dependencies:
+        patterns:
+          - "*"  
