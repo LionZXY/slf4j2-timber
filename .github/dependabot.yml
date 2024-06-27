@@ -1,3 +1,5 @@
+version: 2
+
 updates:
   - package-ecosystem: "gradle"
     directory: "/" 
@@ -8,4 +10,4 @@ updates:
     groups:
       dependencies:
         patterns:
-          - "*"  
+          - "*"
