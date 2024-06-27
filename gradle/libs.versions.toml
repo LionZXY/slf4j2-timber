@@ -6,19 +6,15 @@ timber = "5.0.1"
 junit = "5.10.3"
 festassert = "2.0M10"
 festandroid = "1.0.8"
-mockitocore = "5.12.0"
 robolectric = "4.12.2"
-annotations = "24.1.0"
 jreleaser = "1.12.0"
 
 [libraries]
 slf4j = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
-annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 junit = { group = "org.junit.vintage", name = "junit-vintage-engine", version.ref = "junit" }
 festassert = { group = "org.easytesting", name = "fest-assert-core", version.ref = "festassert" }
 festandroid = { group = "com.squareup", name = "fest-android", version.ref = "festandroid" }
-mockitocore = { group = "org.mockito", name = "mockito-core", version.ref = "mockitocore" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 
 [bundles]

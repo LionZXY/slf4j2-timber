@@ -35,8 +35,6 @@ android {
 }
 
 dependencies {
-    compileOnly(libs.annotations)
-
     implementation(libs.slf4j)
     implementation(libs.timber)
 
@@ -132,6 +130,9 @@ jreleaser {
         github {
             skipTag = true
             sign = true
+            branch = "master"
+            branchPush = "master"
+            overwrite = true
         }
     }
     deploy {
