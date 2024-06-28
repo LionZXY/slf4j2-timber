@@ -22,7 +22,7 @@ artifacts to your project and use `slf4j` like before:
 ```kotlin
 import com.sun.org.slf4j.internal.LoggerFactory
 
-public class YourClass {
+class YourClass {
     private val logger = LoggerFactory.getLogger(YourClass::class.java)
 
     fun yourMethod() {
@@ -49,12 +49,12 @@ Download [the latest AAR][4] or grab it via Maven:
 or Gradle Kotlin DSL:
 
 ```kotlin
-implementation("com.arcao:slf4j2-timber:1.0")
+implementation("uk.kulikov:slf4j2-timber:1.0")
 ```
 or Gradle Groovy:
 
 ```groovy
-implementation 'com.arcao:slf4j2-timber:1.0'
+implementation 'uk.kulikov:slf4j2-timber:1.0'
 ```
 
 > Note: `timber` and `slf4j-api` are the transitive dependencies of `slf4j2-timber`,
