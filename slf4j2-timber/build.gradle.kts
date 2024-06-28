@@ -35,8 +35,9 @@ android {
 }
 
 dependencies {
-    implementation(libs.slf4j)
-    implementation(libs.timber)
+    // Transitive dependencies
+    api(libs.slf4j)
+    api(libs.timber)
 
     testImplementation(libs.festandroid)
     testImplementation(libs.festassert)
