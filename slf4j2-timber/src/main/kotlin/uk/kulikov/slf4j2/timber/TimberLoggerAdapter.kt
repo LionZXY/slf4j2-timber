@@ -7,47 +7,46 @@ import timber.log.Timber
 /**
  *
  * A simple implementation that delegates all log requests to the Timber
- * logging facilities. Note that this logger does not support [org.slf4j.Marker].
+ * logging facilities.
+ *
+ * Note that this logger does not support [org.slf4j.Marker].
+ *
  * Methods taking marker data as parameter simply invoke the eponymous method
  * without the Marker argument, discarding any marker data in the process.
- *
  *
  * The logging levels specified for SLF4J can be almost directly mapped to
  * the logging method that exist in Timber. The following table
  * shows the mapping implemented by this logger.
  *
- * <table border="1">
- * <tr><th>**SLF4J******</th><th>**Timber**</th></tr>
- * <tr><td>TRACE</td><td>Timber.v(...)</td></tr>
- * <tr><td>DEBUG</td><td>Timber.d(...)</td></tr>
- * <tr><td>INFO</td><td>Timber.i(...)</td></tr>
- * <tr><td>WARN</td><td>Timber.w(...)</td></tr>
- * <tr><td>ERROR</td><td>Timber.e(...)</td></tr>
-</table> *
+ *    | **SLF4J** | **Timber**    |
+ *    | ----------| ------------- |
+ *    | TRACE     | Timber.v(...) |
+ *    | DEBUG     | Timber.d(...) |
+ *    | INFO      | Timber.i(...) |
+ *    | WARN      | Timber.w(...) |
+ *    | ERROR     | Timber.e(...) |
  *
  *
  * Use loggers as usual:
  *
- *  *
- * Declare a logger<br></br>
- * `private static final Logger logger = LoggerFactory.getLogger(MyClass.class);`
+ *  * Declare a logger:
+ *    ```java
+ *    private static final Logger logger = LoggerFactory.getLogger(MyClass.class);
+ *    ```
  *
- *  *
- * Invoke logging methods, e.g.,<br></br>
- * `logger.debug("Some log message. Details: {}", someObject);`<br></br>
- * `logger.debug("Some log message with varargs. Details: {}, {}, {}", someObject1, someObject2, someObject3);`
- *
- *
- *
- *
+ *  * Invoke logging methods, e.g.:
+ *    ```java
+ *    logger.debug("Some log message. Details: {}", someObject);
+ *    logger.debug("Some log message with varargs. Details: {}, {}, {}", someObject1, someObject2, someObject3);
+ *    ```
  *
  * Logger instances created using the LoggerFactory are named either according to the name
  * or the fully qualified class name of the class given as a parameter.
- * Each logger name will be used as the tag for Timber if Timber has planted [timber.log.Timber.TaggedTree].
+ * Each logger name will be used as the tag for Timber if Timber has planted [timber.log.Timber.Tree].
  * If tag contains also class package, it will be removed (same way like in [timber.log.Timber.DebugTree]).
  *
- *
- * @author Martin Sloup <arcao></arcao>@arcao.com>
+ * @author Nikita Kulikov <a href="https://kulikov.uk">kulikov.uk</a>
+ * @author Martin Sloup <a href="https://arcao.com">arcao.com</a>
  */
 internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
     private enum class LogType {
@@ -58,10 +57,6 @@ internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
         ERROR
     }
 
-    /**
-     * Package access allows only [AndroidLoggerFactory] to instantiate
-     * SimpleLogger instances.
-     */
     init {
         this.name = tag
     }
