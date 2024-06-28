@@ -11,7 +11,8 @@ import org.slf4j.spi.SLF4JServiceProvider
  * The binding of [org.slf4j.LoggerFactory] class with an actual instance of
  * [ILoggerFactory] is performed using information returned by this class.
  *
- * @author Martin Sloup <arcao></arcao>@arcao.com>
+ * @author Nikita Kulikov <a href="https://kulikov.uk">kulikov.uk</a>
+ * @author Martin Sloup <a href="https://arcao.com">arcao.com</a>
  */
 class TimberLoggerServiceProvider : SLF4JServiceProvider {
     private val loggerFactory: ILoggerFactory = TimberLoggerFactory()

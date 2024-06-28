@@ -1,7 +1,7 @@
 package uk.kulikov.slf4j2.timber
 
+import android.util.Log
 import org.fest.assertions.api.Assertions.assertThat
-import java.util.List
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -13,7 +13,6 @@ import org.robolectric.shadows.ShadowLog.LogItem
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import timber.log.Timber
-import android.util.Log
 
 @RunWith(RobolectricTestRunner::class)
 @Config(manifest = Config.NONE)
