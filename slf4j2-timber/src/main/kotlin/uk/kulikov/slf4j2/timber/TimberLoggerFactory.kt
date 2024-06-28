@@ -10,7 +10,8 @@ import java.util.regex.Pattern
  * TimberLoggerFactory is an implementation of [ILoggerFactory] returning
  * the appropriately named [org.slf4j.LoggerFactory] instance.
  *
- * @author Martin Sloup <arcao></arcao>@arcao.com>
+ * @author Nikita Kulikov <a href="https://kulikov.uk">kulikov.uk</a>
+ * @author Martin Sloup <a href="https://arcao.com">arcao.com</a>
  */
 class TimberLoggerFactory : ILoggerFactory {
     private val loggerMap: ConcurrentMap<String, Logger> = ConcurrentHashMap()
