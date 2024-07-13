@@ -1,12 +1,12 @@
 [versions]
 kotlin = "2.0.0"
-android-gradle = "8.5.0" # https://developer.android.com/studio/releases/gradle-plugin
+android-gradle = "8.5.1" # https://developer.android.com/studio/releases/gradle-plugin
 slf4j = "2.0.13"
 timber = "5.0.1"
 junit = "5.10.3"
 festassert = "2.0M10"
 festandroid = "1.0.8"
-robolectric = "4.12.2"
+robolectric = "4.13"
 jreleaser = "1.13.1"
 
 [libraries]
