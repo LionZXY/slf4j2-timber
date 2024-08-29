@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.0.10"
+kotlin = "2.0.20"
 android-gradle = "8.5.2" # https://developer.android.com/studio/releases/gradle-plugin
 slf4j = "2.0.16"
 timber = "5.0.1"
