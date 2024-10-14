@@ -38,6 +38,44 @@ class TimberLoggerAdapterTest {
         assertThat(log.throwable).isNull()
     }
 
+    @Test
+    fun nullsTest() {
+        Timber.plant(Timber.DebugTree())
+
+        logger.trace(null)
+        logger.trace(null as String?, null)
+        logger.trace(null as String?, null, null)
+        logger.trace(null as String?, null, null, null)
+        logger.trace(null as String?, null as? Throwable?)
+
+        logger.debug(null)
+        logger.debug(null as String?, null)
+        logger.debug(null as String?, null, null)
+        logger.debug(null as String?, null, null, null)
+        logger.debug(null as String?, null as? Throwable?)
+
+        logger.info(null)
+        logger.info(null as String?, null)
+        logger.info(null as String?, null, null)
+        logger.info(null as String?, null, null, null)
+        logger.info(null as String?, null as? Throwable?)
+
+        logger.warn(null)
+        logger.warn(null as String?, null)
+        logger.warn(null as String?, null, null)
+        logger.warn(null as String?, null, null, null)
+        logger.warn(null as String?, null as? Throwable?)
+
+        logger.error(null)
+        logger.error(null as String?, null)
+        logger.error(null as String?, null, null)
+        logger.error(null as String?, null, null, null)
+        logger.error(null as String?, null as? Throwable?)
+
+        val logs = ShadowLog.getLogs()
+        assertThat(logs).isEmpty()
+    }
+
     companion object {
         private val logger: Logger = LoggerFactory.getLogger(TimberLoggerAdapterTest::class.java)
     }

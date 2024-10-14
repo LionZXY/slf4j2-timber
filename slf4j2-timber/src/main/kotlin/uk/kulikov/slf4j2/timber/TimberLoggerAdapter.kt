@@ -65,23 +65,23 @@ internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
         return true
     }
 
-    override fun trace(msg: String) {
+    override fun trace(msg: String?) {
         log(LogType.TRACE, msg, null)
     }
 
-    override fun trace(format: String, arg: Any) {
+    override fun trace(format: String?, arg: Any?) {
         formatAndLog(LogType.TRACE, format, arg)
     }
 
-    override fun trace(format: String, arg1: Any, arg2: Any) {
+    override fun trace(format: String?, arg1: Any?, arg2: Any?) {
         formatAndLog(LogType.TRACE, format, arg1, arg2)
     }
 
-    override fun trace(format: String, vararg argArray: Any) {
+    override fun trace(format: String?, vararg argArray: Any?) {
         formatAndLog(LogType.TRACE, format, *argArray)
     }
 
-    override fun trace(msg: String, t: Throwable) {
+    override fun trace(msg: String?, t: Throwable?) {
         log(LogType.TRACE, msg, t)
     }
 
@@ -89,23 +89,23 @@ internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
         return true
     }
 
-    override fun debug(msg: String) {
+    override fun debug(msg: String?) {
         log(LogType.DEBUG, msg, null)
     }
 
-    override fun debug(format: String, arg: Any) {
+    override fun debug(format: String?, arg: Any?) {
         formatAndLog(LogType.DEBUG, format, arg)
     }
 
-    override fun debug(format: String, arg1: Any, arg2: Any) {
+    override fun debug(format: String?, arg1: Any?, arg2: Any?) {
         formatAndLog(LogType.DEBUG, format, arg1, arg2)
     }
 
-    override fun debug(format: String, vararg argArray: Any) {
+    override fun debug(format: String?, vararg argArray: Any?) {
         formatAndLog(LogType.DEBUG, format, *argArray)
     }
 
-    override fun debug(msg: String, t: Throwable) {
+    override fun debug(msg: String?, t: Throwable?) {
         log(LogType.DEBUG, msg, t)
     }
 
@@ -113,23 +113,23 @@ internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
         return true
     }
 
-    override fun info(msg: String) {
+    override fun info(msg: String?) {
         log(LogType.INFO, msg, null)
     }
 
-    override fun info(format: String, arg: Any) {
+    override fun info(format: String?, arg: Any?) {
         formatAndLog(LogType.INFO, format, arg)
     }
 
-    override fun info(format: String, arg1: Any, arg2: Any) {
+    override fun info(format: String?, arg1: Any?, arg2: Any?) {
         formatAndLog(LogType.INFO, format, arg1, arg2)
     }
 
-    override fun info(format: String, vararg argArray: Any) {
+    override fun info(format: String?, vararg argArray: Any?) {
         formatAndLog(LogType.INFO, format, *argArray)
     }
 
-    override fun info(msg: String, t: Throwable) {
+    override fun info(msg: String?, t: Throwable?) {
         log(LogType.INFO, msg, t)
     }
 
@@ -137,23 +137,23 @@ internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
         return true
     }
 
-    override fun warn(msg: String) {
+    override fun warn(msg: String?) {
         log(LogType.WARN, msg, null)
     }
 
-    override fun warn(format: String, arg: Any) {
+    override fun warn(format: String?, arg: Any?) {
         formatAndLog(LogType.WARN, format, arg)
     }
 
-    override fun warn(format: String, arg1: Any, arg2: Any) {
+    override fun warn(format: String?, arg1: Any?, arg2: Any?) {
         formatAndLog(LogType.WARN, format, arg1, arg2)
     }
 
-    override fun warn(format: String, vararg argArray: Any) {
+    override fun warn(format: String?, vararg argArray: Any?) {
         formatAndLog(LogType.WARN, format, *argArray)
     }
 
-    override fun warn(msg: String, t: Throwable) {
+    override fun warn(msg: String?, t: Throwable?) {
         log(LogType.WARN, msg, t)
     }
 
@@ -161,32 +161,32 @@ internal class TimberLoggerAdapter(tag: String?) : MarkerIgnoringBase() {
         return true
     }
 
-    override fun error(msg: String) {
+    override fun error(msg: String?) {
         log(LogType.ERROR, msg, null)
     }
 
-    override fun error(format: String, arg: Any) {
+    override fun error(format: String?, arg: Any?) {
         formatAndLog(LogType.ERROR, format, arg)
     }
 
-    override fun error(format: String, arg1: Any, arg2: Any) {
+    override fun error(format: String?, arg1: Any?, arg2: Any?) {
         formatAndLog(LogType.ERROR, format, arg1, arg2)
     }
 
-    override fun error(format: String, vararg argArray: Any) {
+    override fun error(format: String?, vararg argArray: Any?) {
         formatAndLog(LogType.ERROR, format, *argArray)
     }
 
-    override fun error(msg: String, t: Throwable) {
+    override fun error(msg: String?, t: Throwable?) {
         log(LogType.ERROR, msg, t)
     }
 
-    private fun formatAndLog(logType: LogType, format: String, vararg argArray: Any) {
+    private fun formatAndLog(logType: LogType, format: String?, vararg argArray: Any?) {
         val ft = MessageFormatter.arrayFormat(format, argArray)
         log(logType, ft.message, ft.throwable)
     }
 
-    private fun log(logType: LogType, message: String, throwable: Throwable?) {
+    private fun log(logType: LogType, message: String?, throwable: Throwable?) {
         val tree: Timber.Tree = Timber.tag(name)
 
         when (logType) {
