@@ -1,6 +1,6 @@
 [versions]
-kotlin = "2.1.0"
-android-gradle = "8.8.0" # https://developer.android.com/studio/releases/gradle-plugin
+kotlin = "2.1.10"
+android-gradle = "8.8.1" # https://developer.android.com/studio/releases/gradle-plugin
 slf4j = "2.0.16"
 timber = "5.0.1"
 junit = "5.11.4"
