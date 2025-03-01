@@ -1,13 +1,13 @@
 [versions]
-kotlin = "2.1.0"
-android-gradle = "8.8.0" # https://developer.android.com/studio/releases/gradle-plugin
-slf4j = "2.0.16"
+kotlin = "2.1.10"
+android-gradle = "8.8.2" # https://developer.android.com/studio/releases/gradle-plugin
+slf4j = "2.0.17"
 timber = "5.0.1"
-junit = "5.11.4"
+junit = "5.12.0"
 festassert = "2.0M10"
 festandroid = "1.0.8"
 robolectric = "4.14.1"
-jreleaser = "1.16.0"
+jreleaser = "1.17.0"
 
 [libraries]
 slf4j = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
